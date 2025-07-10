@@ -1,0 +1,1762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Page</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css?v=1.0">
+
+  <style>
+    .active-role {
+      border: 2px solid blue;
+    }
+
+    .step-1,
+    .step-2 {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .step-2 {
+      display: none;
+    }
+
+    .search-result-heading {
+      margin-top: 4px;
+      font-family: 'Tw Cen MT', sans-serif;
+      font-weight: 700;
+      font-size: 21.82px;
+      font-style: italic;
+      line-height: 24px;
+      letter-spacing: 0.04em;
+      color: rgba(255, 255, 255, 0.9);
+      background: none;
+      padding: 0;
+      border: none;
+      width: auto;
+      position: relative;
+    }
+
+    .search-helper {
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="container">
+    <div class="left-half">
+      <h1>Logo</h1>
+      <div class="button-container">
+        <h2>Present Yourself as..</h2>
+        <button class="button active-role" data-role="writer">Writer</button>
+        <button class="button" data-role="reader">Reader</button>
+        <button class="button" data-role="expert">Subject Expert</button>
+        <button class="button" data-role="client">Client</button>
+        <div class="dashboard-message">
+          For your personalized Dashboard<br>
+          choose from the above
+        </div>
+      </div>
+      <div class="bottom-footer">
+        <div class="footer-message">Humane than AI, faster than human</div>
+        <div class="stickdot-text">Stick&amp;Dot.</div>
+      </div>
+    </div>
+
+    <div class="right-half">
+      <div id="breadcrumb" class="breadcrumb">Signup > Writer</div>
+
+      <div class="breadcrumb-step-3" style="display: none;"></div>
+      <!-- writer wrapper -->
+      <div id="writer-wrapper" class="content-box active">
+        <div class="writer-container">
+          <!-- Step 1 -->
+          <div class="step-1">
+            <div class="step-label">Step 1 of 3</div>
+            <h3>Create Account</h3>
+            <div class="social-login-icons">
+              <a href="https://appleid.apple.com/" target="_blank"><img src="mac.png" alt="Apple" /></a>
+              <a href="https://www.facebook.com/" target="_blank"><img src="faceb.jpg" alt="Facebook" /></a>
+              <a href="https://accounts.google.com/" target="_blank"><img src="google.jpg" alt="Google" /></a>
+            </div>
+            <div class="divider-with-or"><span>or</span></div>
+            <div class="email-signup-label">Sign up with Email</div>
+            <div class="acount-line">
+              <div class="already-account">Already have an account?</div>
+              <a href="#" class="sign-in-link">Sign in</a>
+            </div>
+            <div class="email-section">
+              <label for="writer-email" class="email-label">Email</label><br>
+              <input type="email" id="writer-email" class="email-input" placeholder="Enter your email">
+            </div>
+            <div class="password-section">
+              <label for="writer-password" class="password-label">Password</label><br>
+              <input type="password" id="writer-password" class="password-input" placeholder="Enter your password">
+            </div>
+            <div class="continue-button-wrapper">
+              <button class="continue-button">Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-2">
+            <div class="step-label">Step 2 of 3</div>
+            <h3>Enter OTP</h3>
+            <p>Please check your email for the verification code.</p>
+            <input type="text" id="writer-otp" class="email-input" placeholder="Enter OTP">
+            <button class="continue-button">Verify OTP</button>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-3" style="display: none;">
+            <div class="step-label">Step 3 of 3</div>
+            <h3>Add Details</h3>
+            <div class="email-section">
+              <label for="writer-fullname" class="email-label">Name</label><br />
+              <input type="text" id="writer-fullname" class="email-input" placeholder="Enter your full name" />
+            </div>
+            <div class="email-section">
+              <label for="writer-phone" class="email-label">Mobile No.</label><br />
+              <input type="tel" id="writer-phone" class="email-input" placeholder="Enter your mobile number" />
+            </div>
+            <button class="continue-button">Continue</button>
+            <button class="skip-button">Skip for now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reader Wrapper -->
+      <div id="reader-wrapper" class="content-box" style="display: none;">
+        <div class="writer-container">
+          <!-- Step 1 -->
+          <div class="step-1">
+            <div class="step-label">Step 1 of 3</div>
+            <h3>Create Account</h3>
+            <div class="social-login-icons">
+              <a href="https://appleid.apple.com/" target="_blank"><img src="mac.png" alt="Apple" /></a>
+              <a href="https://www.facebook.com/" target="_blank"><img src="faceb.jpg" alt="Facebook" /></a>
+              <a href="https://accounts.google.com/" target="_blank"><img src="google.jpg" alt="Google" /></a>
+            </div>
+            <div class="divider-with-or"><span>or</span></div>
+            <div class="email-signup-label">Sign up with Email</div>
+            <div class="acount-line">
+              <div class="already-account">Already have an account?</div>
+              <a href="#" class="sign-in-link">Sign in</a>
+            </div>
+            <div class="email-section">
+              <label for="reader-email" class="email-label">Email</label><br>
+              <input type="email" id="reader-email" class="email-input" placeholder="Enter your email">
+            </div>
+            <div class="password-section">
+              <label for="reader-password" class="password-label">Password</label><br>
+              <input type="password" id="reader-password" class="password-input" placeholder="Enter your password">
+            </div>
+            <div class="continue-button-wrapper">
+              <button class="continue-button">Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-2">
+            <div class="step-label">Step 2 of 3</div>
+            <h3>Enter OTP</h3>
+            <p>Please check your email for the verification code.</p>
+            <input type="text" id="reader-otp" class="email-input" placeholder="Enter OTP">
+            <button class="continue-button">Verify OTP</button>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-3" style="display: none;">
+            <div class="step-label">Step 3 of 3</div>
+            <h3>Add Details</h3>
+            <div class="email-section">
+              <label for="reader-fullname" class="email-label">Name</label><br />
+              <input type="text" id="reader-fullname" class="email-input" placeholder="Enter your full name" />
+            </div>
+            <div class="email-section">
+              <label for="reader-phone" class="email-label">Mobile No.</label><br />
+              <input type="tel" id="reader-phone" class="email-input" placeholder="Enter your mobile number" />
+            </div>
+            <button class="continue-button">Continue</button>
+            <button class="skip-button">Skip for now</button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Expert Wrapper -->
+      <!-- Subject Expert Wrapper -->
+      <div id="expert-wrapper" class="content-box" style="display: none;">
+        <div class="writer-container">
+          <!-- Step 1 -->
+          <div class="step-1">
+            <div class="step-label">Step 1 of 3</div>
+            <h3>Create Account</h3>
+            <div class="social-login-icons">
+              <a href="https://appleid.apple.com/" target="_blank"><img src="mac.png" alt="Apple" /></a>
+              <a href="https://www.facebook.com/" target="_blank"><img src="faceb.jpg" alt="Facebook" /></a>
+              <a href="https://accounts.google.com/" target="_blank"><img src="google.jpg" alt="Google" /></a>
+            </div>
+            <div class="divider-with-or"><span>or</span></div>
+            <div class="email-signup-label">Sign up with Email</div>
+            <div class="acount-line">
+              <div class="already-account">Already have an account?</div>
+              <a href="#" class="sign-in-link">Sign in</a>
+            </div>
+            <div class="email-section">
+              <label for="expert-email" class="email-label">Email</label><br>
+              <input type="email" id="expert-email" class="email-input" placeholder="Enter your email">
+            </div>
+            <div class="password-section">
+              <label for="expert-password" class="password-label">Password</label><br>
+              <input type="password" id="expert-password" class="password-input" placeholder="Enter your password">
+            </div>
+            <div class="continue-button-wrapper">
+              <button class="continue-button">Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-2">
+            <div class="step-label">Step 2 of 3</div>
+            <h3>Enter OTP</h3>
+            <p>Please check your email for the verification code.</p>
+            <input type="text" id="expert-otp" class="email-input" placeholder="Enter OTP">
+            <button class="continue-button">Verify OTP</button>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-3" style="display: none;">
+            <div class="step-label">Step 3 of 3</div>
+            <h3>Add Details</h3>
+            <div class="email-section">
+              <label for="expert-fullname" class="email-label">Name</label><br />
+              <input type="text" id="expert-fullname" class="email-input" placeholder="Enter your full name" />
+            </div>
+            <div class="email-section">
+              <label for="expert-phone" class="email-label">Mobile No.</label><br />
+              <input type="tel" id="expert-phone" class="email-input" placeholder="Enter your mobile number" />
+            </div>
+            <button class="continue-button">Continue</button>
+            <button class="skip-button">Skip for now</button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- Client Wrapper -->
+      <div id="client-wrapper" class="content-box" style="display: none;">
+        <div class="writer-container">
+          <!-- Step 1 -->
+          <div class="step-1">
+            <div class="step-label">Step 1 of 3</div>
+            <h3>Create Account</h3>
+            <div class="social-login-icons">
+              <a href="https://appleid.apple.com/" target="_blank"><img src="mac.png" alt="Apple" /></a>
+              <a href="https://www.facebook.com/" target="_blank"><img src="faceb.jpg" alt="Facebook" /></a>
+              <a href="https://accounts.google.com/" target="_blank"><img src="google.jpg" alt="Google" /></a>
+            </div>
+            <div class="divider-with-or"><span>or</span></div>
+            <div class="email-signup-label">Sign up with Email</div>
+            <div class="acount-line">
+              <div class="already-account">Already have an account?</div>
+              <a href="#" class="sign-in-link">Sign in</a>
+            </div>
+            <div class="email-section">
+              <label for="client-email" class="email-label">Email</label><br>
+              <input type="email" id="client-email" class="email-input" placeholder="Enter your email">
+            </div>
+            <div class="password-section">
+              <label for="client-password" class="password-label">Password</label><br>
+              <input type="password" id="client-password" class="password-input" placeholder="Enter your password">
+            </div>
+            <div class="continue-button-wrapper">
+              <button class="continue-button">Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-2">
+            <div class="step-label">Step 2 of 3</div>
+            <h3>Enter OTP</h3>
+            <p>Please check your email for the verification code.</p>
+            <input type="text" id="client-otp" class="email-input" placeholder="Enter OTP">
+            <button class="continue-button">Verify OTP</button>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-3" style="display: none;">
+            <div class="step-label">Step 3 of 3</div>
+            <h3>Add Details</h3>
+            <div class="email-section">
+              <label for="client-fullname" class="email-label">Name</label><br />
+              <input type="text" id="client-fullname" class="email-input" placeholder="Enter your full name" />
+            </div>
+            <div class="email-section">
+              <label for="client-phone" class="email-label">Mobile No.</label><br />
+              <input type="tel" id="client-phone" class="email-input" placeholder="Enter your mobile number" />
+            </div>
+            <button class="continue-button">Continue</button>
+            <button class="skip-button">Skip for now</button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- New Page Interface -->
+  <div class="final-page-wrapper">
+    <div id="final-page" class="final-page" style="display: none;">
+      <!-- Sidebar -->
+      <div class="sidebar-left">
+        <ul class="sidebar-menu">
+          <li onclick="showDashboard()">
+            <i class="fas fa-tachometer-alt"></i><span class="menu-label">Dashboard</span>
+          </li>
+          <li onclick="showResourcesPage()"><i class="fas fa-book"></i><span class="menu-label">Resources</span></li>
+          <li><i class="fas fa-plus-circle"></i><span class="menu-label">Create</span></li>
+          <li onclick="showWriterSettingsPage()"><i class="fas fa-cog"></i><span class="menu-label">Settings</span></li>
+          <li onclick="showPortfolioPage()"><i class="fas fa-user"></i><span class="menu-label">My Portfolio</span></li>
+        </ul>
+      </div>
+
+      <!-- Explore Page -->
+      <div class="main-content">
+        <h1 class="explore-heading">Explore</h1>
+
+        <div class="search-box">
+          <span class="search-icon"><i class="fas fa-search" style="color: white;"></i></span>
+          <input type="text" class="explore-search" oninput="updateKeyword(this.value)" />
+        </div>
+
+        <div class="search-helper">Explore with Keywords/Topics/Authors</div>
+
+        <div class="search-result-section">
+          <div class="search-result-heading">
+            Showing search results for ‘<span id="search-keyword">KEYWORD</span>’
+          </div>
+        </div>
+        <div class="hashtag-container">
+          <div class="hashtag-frame">#AI</div>
+          <div class="hashtag-frame">#ML</div>
+          <div class="hashtag-frame">#DATASCIENCE</div>
+          <div class="hashtag-frame">#DEEPLEARNING</div>
+          <div class="hashtag-frame">#NLP</div>
+        </div>
+        <div class="card-container">
+          <div class="card">
+            <div class="card-title">Title Name</div>
+            <div class="card-author">
+              <div class="author-dot"></div>
+              <div class="author-name">NAME AUTHOR/BUSINESS</div>
+            </div>
+          </div>
+
+          <div class="card card-center">
+            <div class="read-time-pill">⏺ X mins read</div>
+            <div class="card-title">Title Name</div>
+            <div class="card-author">
+              <div class="author-dot"></div>
+              <div class="author-name">NAME AUTHOR/BUSINESS</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Title Name</div>
+            <div class="card-author">
+              <div class="author-dot"></div>
+              <div class="author-name">NAME AUTHOR/BUSINESS</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Dashboard Page -->
+      <div id="dashboard-page" style="display: none;">
+        <div class="dashboard-content">
+          <h1 class="dashboard-heading">Welcome, Shaivya</h1>
+          <h2 class="dashboard-preview-heading">Your Dashboard Preview</h2>
+          <div class="top-cards">
+            <div class="dashboard-card">
+              <img src="payment-icon.png" alt="Payment" class="card-icon">
+              <div class="card-content">
+                <p class="card-titles">Payments received</p>
+                <h3 class="card-value">Rs. XYZ</h3>
+                <p class="card-subtext"><span class="up">▲</span> +3.20%</p>
+              </div>
+            </div>
+
+            <div class="dashboard-card">
+              <img src="words-icon.png" alt="Words Written" class="card-icon">
+              <div class="card-content">
+                <p class="card-titles">Words written</p>
+                <h3 class="card-value">XXX</h3>
+                <p class="card-subtext"><span class="up">▲</span> +2.50%</p>
+              </div>
+            </div>
+
+            <div class="dashboard-card">
+              <img src="engagement-icon.png" alt="Engagement" class="card-icon">
+              <div class="card-content">
+                <p class="card-titles">Engagement so far</p>
+                <h3 class="card-value">50%</h3>
+                <p class="card-subtext"><span class="down">▼</span> -1.20%</p>
+              </div>
+            </div>
+          </div>
+          <div class="overall-feedback-card">
+            <div class="feedback-left">
+              <img src="coins.jpg" class="feedback-icon" alt="Coins">
+              <div class="feedback-text">
+                <p class="feedback-label">Overall feedback</p>
+                <h3 class="feedback-value">1.2k</h3>
+                <p class="feedback-subtext">Feedbacks</p>
+              </div>
+            </div>
+
+            <div class="feedback-stars">
+              ⭐⭐⭐⭐⭐
+            </div>
+
+            <div class="feedback-profile">
+              <img src="profile.png" class="feedback-avatar" alt="User">
+              <div class="feedback-user-info">
+                <p class="user-name">Shaivya S.</p>
+                <p class="user-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...
+                </p>
+                <p class="user-subtext">+50XX</p>
+              </div>
+              <div class="arrow-btn">→</div>
+            </div>
+          </div>
+
+          <div class="bottom-card-row">
+            <div class="bottom-card-wrapper">
+              <div class="top-articles-card">
+                <div class="articles-header">
+                  <div class="articles-title">
+                    <i class="fas fa-star"></i> Your Top Articles
+                  </div>
+                  <div class="articles-details">Details</div>
+                </div>
+                <div class="article-item">
+                  <span class="article-rank">#1</span>
+                  <div class="article-content">
+                    <span class="article-name">Article Name</span>
+                    <span class="article-rating">Rating ⭐⭐⭐⭐⭐</span>
+                    <span class="article-views">12K Views</span>
+                  </div>
+                </div>
+                <div class="article-item">
+                  <span class="article-rank">#2</span>
+                  <div class="article-content">
+                    <span class="article-name">Article Name</span>
+                    <span class="article-rating">Rating ⭐⭐⭐⭐⭐</span>
+                    <span class="article-views">12K Views</span>
+                  </div>
+                </div>
+                <div class="article-item">
+                  <span class="article-rank">#3</span>
+                  <div class="article-content">
+                    <span class="article-name">Article Name</span>
+                    <span class="article-rating">Rating ⭐⭐⭐⭐⭐</span>
+                    <span class="article-views">12K Views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Trends Card -->
+            <div class="trend-wrapper">
+              <div class="trends-card">
+                <div class="trends-header">
+                  <span><i class="fas fa-chart-line"></i> Trends</span>
+                  <span class="trend-percent">▲ +5.23%</span>
+                </div>
+                <div class="trends-body">
+                  <div class="trend-graph">
+                    <img src="graph.jpg" alt="Trend Graph" class="trend-image" />
+                  </div>
+                  <div class="trend-dropdown">
+                    <button class="dropdown-button">Payment ▼</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-section">
+              <!-- Engagement Card -->
+              <div class="engagement-card">
+                <div class="engagement-header">
+                  <span><i class="fas fa-chart-line"></i> Engagement</span>
+                  <button class="dropdown-btn">This Week ▼</button>
+                </div>
+                <div class="engagement-body">
+                  <div class="engagement-stats">
+                    <span class="stat-now">+20%</span>
+                    <span class="stat-prev">-10%</span>
+                  </div>
+                  <div class="impressions">
+                    <p>Impressions</p>
+                    <div class="bar-graph">
+                      <div class="bar" style="height: 40%"></div>
+                      <div class="bar" style="height: 70%"></div>
+                      <div class="bar" style="height: 60%"></div>
+                      <div class="bar" style="height: 90%"></div>
+                      <div class="bar" style="height: 50%"></div>
+                    </div>
+                    <div class="right-label">+15<br><small>Lorem ipsum dolor</small></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Top Category Card -->
+              <div class="category-card">
+                <div class="category-header">
+                  <span><i class="fas fa-layer-group"></i> Top Category</span>
+                  <button class="dropdown-btn">This Week ▼</button>
+                </div>
+                <div class="category-list">
+                  <div class="category-item">
+                    <div class="category-icon"><i class="fas fa-pen-nib"></i></div>
+                    <div class="category-info">
+                      <div class="category-name">Category Name</div>
+                      <div class="category-popularity">Popularity 10.1K</div>
+                    </div>
+                  </div>
+                  <div class="category-item">
+                    <div class="category-icon"><i class="fas fa-tags"></i></div>
+                    <div class="category-info">
+                      <div class="category-name">Category Name</div>
+                      <div class="category-popularity">Popularity 10.1K</div>
+                    </div>
+                  </div>
+                  <div class="category-item">
+                    <div class="category-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <div class="category-info">
+                      <div class="category-name">Category Name</div>
+                      <div class="category-popularity">Popularity 10.1K</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Audience Card -->
+              <div class="audience-card">
+                <div class="audience-header">
+                  <span>Audience</span>
+                  <span class="audience-details">Details</span>
+                </div>
+                <div class="audience-body">
+                  <div class="audience-pie">
+                    <img src="audi.jpg" alt="Audience Graph" class="audience-img" />
+                    <div class="total-audience">xyz</div>
+                  </div>
+                  <div class="audience-labels">
+                    <p><span class="dot dot1"></span> Lorem Ipsum</p>
+                    <p><span class="dot dot2"></span> Lorem Ipsum</p>
+                    <p><span class="dot dot3"></span> Lorem Ipsum</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+          </div>
+          <div class="feedback-heading">Feedback</div>
+          <div class="feedback-cards">
+            <!-- Recent Performance Card -->
+            <div class="feedback-card recent-performance">
+              <h3 class="feedback-title">Your Recent Performance</h3>
+              <div class="feedback-metrics">
+                <div class="metric">
+                  <div class="metric-value">12k</div>
+                  <div class="metric-label">Impressions</div>
+                </div>
+                <div class="divider"></div>
+                <div class="metric">
+                  <div class="metric-value">12k</div>
+                  <div class="metric-label">Likes</div>
+                </div>
+                <div class="divider"></div>
+                <div class="metric">
+                  <div class="metric-value">12k</div>
+                  <div class="metric-label">Feedbacks</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Overall Feedback Card -->
+            <div class="feedback-card overall-feedback">
+              <h3 class="feedback-title">Overall</h3>
+              <div class="overall-text">Lorem Ipsum dolor</div>
+              <div class="overall-score">4.5 / 5</div>
+              <div class="overall-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+
+
+
+      </div>
+      <!-- resources page icon -->
+      <!-- Resources Page Section -->
+      <div id="writer-resources-page" class="resources-page" style="display: none;">
+        <div class="resources-content">
+          <img src="notfound.jpg" alt="404" class="error-image" />
+          <h2>How can we help you?</h2>
+          <p>You can try the following options</p>
+          <div class="error-buttons">
+            <button class="error-btn">Options available on internet</button>
+            <button class="error-btn">Start your own content</button>
+          </div>
+        </div>
+      </div>
+      <!-- Portfolio Page Section -->
+      <div id="portfolio-page" class="portfolio-page" style="display: none;">
+        <div class="portfolio-content">
+          <h2 class="portfolio-heading">My portfolio</h2>
+
+          <div class="card-container">
+            <div class="card">
+              <div class="card-title">Title Name</div>
+              <div class="card-author">
+                <div class="author-dot"></div>
+                <div class="author-name">NAME AUTHOR/BUSINESS</div>
+              </div>
+            </div>
+
+            <div class="card card-center">
+              <div class="read-time-pill">⏺ X mins read</div>
+              <div class="card-title">Title Name</div>
+              <div class="card-author">
+                <div class="author-dot"></div>
+                <div class="author-name">NAME AUTHOR/BUSINESS</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-title">Title Name</div>
+              <div class="card-author">
+                <div class="author-dot"></div>
+                <div class="author-name">NAME AUTHOR/BUSINESS</div>
+              </div>
+            </div>
+          </div>
+
+          <p class="portfolio-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+          </p>
+
+          <button class="read-now-btn">Read Now →</button>
+        </div>
+      </div>
+      <!-- Writer Settings Page -->
+      <!-- Writer Settings Page -->
+      <div id="writer-settings-page" class="writer-settings-page" style="display: none;">
+        <h2 class="settings-heading">Welcome, Shaivya</h2>
+        <div class="searches-bar">
+          <input type="text" placeholder="Search" />
+          <button>🔍</button>
+        </div>
+        <div class="settings-container">
+          <div class="profile-section">
+            <div class="profile-card">
+              <div class="clients-now">
+                <h4>Clients Now</h4>
+                <p>Give the best service to get him to subscribe</p>
+                <hr class="client-divider" />
+              </div>
+              <img src="men.png" alt="Profile" class="profile-avatar" />
+              <h3>Richard Tyson</h3>
+              <p class="designation">CEO at Tokopedia</p>
+              <p class="employee-id">Employee ID: CLT - 001</p>
+
+              <div class="profile-details">
+                <p><strong>Phone:</strong> +6281235123288</p>
+                <p><strong>Email:</strong> richardtyson@gmail.com</p>
+                <p><strong>Address:</strong> Merdeka Street, Wonosobo</p>
+                <p><strong>Password:</strong> ••••••</p>
+                <p><strong>Bank:</strong> ••••••</p>
+                <p><strong>IIFSC code:</strong> ••••••</p>
+              </div>
+
+              <div class="description">
+                <h4>Description</h4>
+                <p>
+                  I’m the CEO at Tokopedia. Establishing an application myself is my goal.
+                  I want to help users find what they’re looking for in the best possible way.
+                </p>
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="client-section">
+            <div class="client-header">
+              <h3>My Clients</h3>
+              <div class="filters">
+                <select>
+                  <option>All Data</option>
+                </select>
+                <select>
+                  <option>August</option>
+                </select>
+              </div>
+            </div>
+            <table class="client-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone Number</th>
+                  <th>Employee ID</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="client-info">
+                    <img src="wman.png" alt="Daffa" class="client-avatar" />
+                    <div>
+                      <strong>Daffa Naufal</strong><br />
+                      <small>CEO at Google</small>
+                    </div>
+                  </td>
+
+                  <td>daffanaufal@gmail.com</td>
+                  <td>+6221345678</td>
+                  <td>GGL - 001</td>
+                </tr>
+                <tr>
+                  <td class="client-info">
+                    <img src="wman.png" alt="Shakir" class="client-avatar" />
+                    <div>
+                      <strong>Shakir Ramzi</strong><br />
+                      <small>CEO at Garena</small>
+                    </div>
+                  </td>
+                  <td>shakirramzi@gmail.com</td>
+                  <td>+6223467890</td>
+                  <td>GRN - 002</td>
+                </tr>
+                <tr>
+                  <td class="client-info">
+                    <img src="wman.png" alt="Zara" class="client-avatar" />
+                    <div>
+                      <strong>Zara Annisa</strong><br />
+                      <small>Ceo at Bukalapak</small>
+                    </div>
+                  </td>
+
+                  <td>annisazara@gmail.com</td>
+                  <td>+6221345978</td>
+                  <td>GAL - 001</td>
+                </tr>
+                <tr>
+                  <td class="client-info">
+                    <img src="wman.png" alt="Chris" class="client-avatar" />
+                    <div>
+                      <strong>Chris Evans</strong><br />
+                      <small>Ceo at Amazon</small>
+                    </div>
+                  </td>
+
+                  <td>chrisevans@gmail.com</td>
+                  <td>+6221325678</td>
+                  <td>GLL - 001</td>
+                </tr>
+                <tr>
+                  <td class="client-info">
+                    <img src="wman.png" alt="Daffa" class="client-avatar" />
+                    <div>
+                      <strong>Jack Miller</strong><br />
+                      <small>CEO at Dana</small>
+                    </div>
+                  </td>
+
+                  <td>jackmiller@gmail.com</td>
+                  <td>+6221145678</td>
+                  <td>GOL - 001</td>
+                </tr>
+
+                <!-- Add more rows as needed -->
+              </tbody>
+            </table>
+            <div class="pagination-footer">
+              <div class="entries-info">Showing 1 to 9 of 90 entries</div>
+              <div class="pagination-controls">
+                <span class="pagination-btn disabled">Previous</span>
+                <span class="pagination-btn active">1</span>
+                <span class="pagination-btn">2</span>
+                <span class="pagination-btn">Next</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="edit-button">Edit Details</button>
+      </div>
+
+
+
+
+
+    </div>
+    <!-- Reader Dashboard Page -->
+    <!-- Reader Dashboard Page -->
+    <div id="reader-dashboard" class="final-page" style="display: none;">
+      <!-- Sidebar -->
+      <div class="sidebar-left">
+        <ul class="sidebar-menu">
+          <li onclick="showReaderDashboard()">
+            <i class="fas fa-tachometer-alt"></i><span class="menu-label">Dashboard</span>
+          </li>
+          <li onclick="showReaderResources()"><i class="fas fa-book"></i><span class="menu-label">Resources</span></li>
+          <li onclick="showPage('create')"><i class="fas fa-plus-circle"></i><span class="menu-label">Create</span></li>
+          <li><i class="fas fa-cog"></i><span class="menu-label">Settings</span></li>
+          <li onclick="showPortfolioPage()"><i class="fas fa-user"></i><span class="menu-label">My Portfolio</span></li>
+        </ul>
+      </div>
+
+      <!-- Explore Page -->
+      <div id="reader-explore-page" class="main-content">
+        <h1 class="explore-heading">Explore</h1>
+        <div class="search-box">
+          <span class="search-icon"><i class="fas fa-search" style="color: white;"></i></span>
+          <input type="text" class="explore-search" oninput="updateKeyword(this.value)" />
+        </div>
+        <div class="search-helper">Explore with Keywords/Topics/Authors</div>
+        <div class="search-result-section">
+          <div class="search-result-heading">
+            Showing search results for ‘<span id="search-keyword">KEYWORD</span>’
+          </div>
+        </div>
+        <div class="hashtag-container">
+          <div class="hashtag-frame">#AI</div>
+          <div class="hashtag-frame">#ML</div>
+          <div class="hashtag-frame">#DATASCIENCE</div>
+          <div class="hashtag-frame">#DEEPLEARNING</div>
+          <div class="hashtag-frame">#NLP</div>
+        </div>
+        <div class="card-containers">
+          <div class="card">
+            <div class="card-title">Title Name</div>
+            <div class="card-author">
+              <div class="author-dot"></div>
+              <div class="author-name">NAME AUTHOR/BUSINESS</div>
+            </div>
+          </div>
+          <div class="card card-center">
+            <div class="read-time-pill">⏺ X mins read</div>
+            <div class="card-title">Title Name</div>
+            <div class="card-author">
+              <div class="author-dot"></div>
+              <div class="author-name">NAME AUTHOR/BUSINESS</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">Title Name</div>
+            <div class="card-author">
+              <div class="author-dot"></div>
+              <div class="author-name">NAME AUTHOR/BUSINESS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reader Dashboard Page -->
+      <div id="reader-dashboard-page" class="main-contents" style="display: none;">
+
+        <div class="reader-dashboard-container">
+          <div class="breadcrumb-reader">Dashboard > Profile</div>
+          <div class="searchs-bar">
+            <input type="text" placeholder="Search" />
+            <button>🔍</button>
+          </div>
+          <h1 class="reader-dashboard-heading">Welcome, Shaivya</h1>
+          <h2 class="reader-subheading">Your Dashboard Preview</h2>
+
+          <div class="dashboard-header">
+            <!-- <div class="searchs-bar">
+              <input type="text" placeholder="Search" />
+              <button>🔍</button>
+            </div> -->
+            <div class="filter-buttons">
+              <button class="active">Today</button>
+              <button>Select Date</button>
+              <button>Filter</button>
+            </div>
+          </div>
+
+          <div class="top-cardes">
+            <div class="dashboards-card">
+              <img src="book.png" alt="Payment" class="card-icon">
+              <div class="card-content">
+                <p class="card-titles">Content Read</p>
+                <h3 class="card-value">Rs. XYZ</h3>
+                <p class="card-subtext"><span class="up">▲</span> +3.20%</p>
+              </div>
+            </div>
+
+            <div class="dashboards-card">
+              <img src="chat.png" alt="Words Written" class="card-icon">
+              <div class="card-content">
+                <p class="card-titles">Feedback Given</p>
+                <h3 class="card-value">XXX</h3>
+                <p class="card-subtext"><span class="up">▲</span> +2.50%</p>
+              </div>
+            </div>
+
+            <div class="dashboards-card">
+              <img src="bulb.png" alt="Engagement" class="card-icon">
+              <div class="card-content">
+                <p class="card-titles">understanding Meter</p>
+                <h3 class="card-value">50%</h3>
+                <p class="card-subtext"><span class="down">▼</span> -1.20%</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom-section">
+            <div class="top-articles">
+              <h3>Your Top Articles <span class="details-link">Details</span></h3>
+              <div class="article">
+                <span>#1</span>
+                <div>
+                  <p>Article Name</p>
+                  <small>Rating ⭐⭐⭐⭐⭐ · 12K Views</small>
+                </div>
+              </div>
+              <div class="article">
+                <span>#2</span>
+                <div>
+                  <p>Article Name</p>
+                  <small>Rating ⭐⭐⭐⭐⭐ · 12K Views</small>
+                </div>
+              </div>
+              <div class="article">
+                <span>#3</span>
+                <div>
+                  <p>Article Name</p>
+                  <small>Rating ⭐⭐⭐⭐⭐ · 12K Views</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="understanding-meter-card">
+              <div class="meter-circle">
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                  <path class="circle-bg" d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <path class="circle" stroke-dasharray="68, 100" d="M18 2.0845
+                   a 15.9155 15.9155 0 0 1 0 31.831
+                   a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <text x="18" y="20.35" class="percentage">68%</text>
+                </svg>
+              </div>
+              <div class="meter-text">
+                <h3>Understanding Meter</h3>
+                <p>68%</p>
+                <p class="description">How is understanding meter calculated?<br />
+                  Based on time spent, rating given, scrolling depth, and user engagement metrics.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+      <!-- Create Page Section -->
+      <div id="create-page" class="main-contents" style="display: none; background-color: white;">
+        <div class="create-container">
+          <h1 class="create-heading">The World’s Most Dangerous Technology Ever Made.</h1>
+          <!-- You can add more content here later -->
+          <!-- Author + Metadata -->
+          <div class="create-meta">
+            <span class="author">Ralph Lassiter</span> •
+            <span class="read-time">7 min read</span> •
+            <span class="publish-date">May 7, 2025</span>
+          </div>
+
+          <!-- Keyword Suggestion + Engagement Card -->
+          <div class="create-meta-card">
+            <div class="create-keywords">
+              <p class="label">Suggested Keywords</p>
+              <div class="tags">
+                <span>#Technology</span>
+                <span>#AI</span>
+                <span>#Ethics</span>
+                <span>#Progress</span>
+                <span>#Future</span>
+
+              </div>
+            </div>
+            <div class="create-engagement">
+              <p class="label">Engagement</p>
+              <h3>2,4K</h3>
+              <img src="graph.jpg" alt="Engagement Graph" class="engagement-graph" />
+            </div>
+          </div>
+
+          <!-- Hero Image -->
+          <img src="musicpedals.jpg" alt="Tech Setup" class="create-hero-image" />
+
+          <!-- Article Content -->
+          <div class="create-article-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatibus laborum doloremque
+              distinctio pariatur odit atque. Voluptatibus dolorem corporis iusto ea pariatur officia nulla?</p>
+            <p>Nam commodi eos praesentium neque distinctio excepturi ea mollitia. Officia fugiat explicabo, earum ab
+              excepturi quod nisi cupiditate? Ipsum nisi iusto illum laborum quae.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa aliquid unde, dicta quibusdam aut eaque
+              tenetur amet iure molestiae repellendus. Iusto voluptate fuga harum.</p>
+          </div>
+
+          <!-- Author Bio -->
+          <h1 class="author-infom">About the Author</h1>
+          <div class="create-author-bio">
+            <img src="author.jpg" alt="Arthur Black" class="author-image" />
+            <div class="bio-text">
+              <h4>Arthur Black</h4>
+              <p>Writer, philosopher, and AI researcher with a passion for ethical design and thought-provoking content.
+              </p>
+            </div>
+          </div>
+
+          <!-- Comments Section -->
+
+          <div class="create-bottom-section">
+
+            <h2 class="comments-heading">Comments</h2>
+
+            <!-- Add a Comment -->
+            <div class="comment-box">
+              <label for="comment-input">Add a Comment</label>
+              <div class="comment-input-wrapper">
+                <input type="text" id="comment-input" placeholder="Type your Comment">
+                <button class="upload-btn">📤 Upload</button>
+              </div>
+            </div>
+
+            <!-- Author Card -->
+            <div class="author-card">
+              <img src="chats.png" class="author-icon" alt="icon">
+              <div class="author-info">
+                <h3 class="author-name">Shaivya S.</h3>
+                <p class="author-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua.</p>
+                <div class="author-bottom">
+                  <button class="earnings-btn">+ $XXX</button>
+                  <button class="arrow-btn">→</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feedback Table -->
+            <div class="feedback-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Date Created</th>
+                    <th>Quality</th>
+                    <th>Comments</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Repeat this row as needed -->
+                  <tr>
+                    <td class="comment-name"><img src="ava.png" class="table-avatar"> Shaivya S.</td>
+                    <td>10/2/2023</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>Lorem ipsum dolor Lorem ipsum dolor</td>
+                  </tr>
+                  <!-- You can loop or clone -->
+                  <tr>
+                    <td class="comment-name"><img src="ava.png" class="table-avatar"> Shaivya S.</td>
+                    <td>10/2/2023</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>Lorem ipsum dolor Lorem ipsum dolor</td>
+                  </tr>
+                  <tr>
+                    <td class="comment-name"><img src="ava.png" class="table-avatar"> Shaivya S.</td>
+                    <td>10/2/2023</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>Lorem ipsum dolor Lorem ipsum dolor</td>
+                  </tr>
+                  <tr>
+                    <td class="comment-name"><img src="ava.png" class="table-avatar"> Shaivya S.</td>
+                    <td>10/2/2023</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>Lorem ipsum dolor Lorem ipsum dolor</td>
+                  </tr>
+                  <tr>
+                    <td class="comment-name"><img src="ava.png" class="table-avatar"> Shaivya S.</td>
+                    <td>10/2/2023</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>Lorem ipsum dolor Lorem ipsum dolor</td>
+                  </tr>
+                  <tr>
+                    <td class="comment-name"><img src="ava.png" class="table-avatar"> Shaivya S.</td>
+                    <td>10/2/2023</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>Lorem ipsum dolor Lorem ipsum dolor</td>
+                  </tr>
+                  <tr>
+                    <td class="comment-name"><img src="ava.png" class="table-avatar"> Shaivya S.</td>
+                    <td>10/2/2023</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>Lorem ipsum dolor Lorem ipsum dolor</td>
+                  </tr>
+                  <!-- Add more rows as needed -->
+                </tbody>
+              </table>
+
+
+              <div class="close-icon">✖</div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="submit-wrapper">
+              <button class="submit-btn">Submit</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- Subject Expert Final Dashboard -->
+    <div id="expert-dashboard" class="final-page" style="display: none;">
+      <!-- Sidebar -->
+      <div class="sidebar-left">
+        <ul class="sidebar-menu">
+          <li onclick="showExpertDashboard()">
+            <i class="fas fa-tachometer-alt"></i><span class="menu-label">Dashboard</span>
+          </li>
+          <li>
+            <i class="fas fa-book"></i><span class="menu-label">Resources</span>
+          </li>
+          <li>
+            <i class="fas fa-plus-circle"></i><span class="menu-label">Create</span>
+          </li>
+          <li onclick="showExpertSettingsPage()">
+            <i class="fas fa-cog"></i><span class="menu-label">Settings</span>
+          </li>
+          <li>
+            <i class="fas fa-user"></i><span class="menu-label">My Portfolio</span>
+          </li>
+        </ul>
+      </div>
+
+
+      <!-- Explore Page -->
+      <div id="expert-explore-page" class="main-content">
+        <h1 class="explore-heading">Explore</h1>
+        <div class="search-box">
+          <span class="search-icon"><i class="fas fa-search" style="color: white;"></i></span>
+          <input type="text" class="explore-search" oninput="updateKeyword(this.value)" />
+        </div>
+        <div class="search-helper">Explore with Keywords/Topics/Authors</div>
+        <div class="search-result-section">
+          <div class="search-result-heading">
+            Showing search results for ‘<span id="search-keyword">KEYWORD</span>’
+          </div>
+        </div>
+        <div class="hashtag-container-expert">
+          <div class="hashtag-frame-expert">#AI</div>
+          <div class="hashtag-frame-expert">#ML</div>
+          <div class="hashtag-frame-expert">#DataScience</div>
+          <div class="hashtag-frame-expert">#NLP</div>
+        </div>
+
+        <!-- Three Cards (Matching Writer/Reader Layout) -->
+        <div class="card-container-expert">
+          <div class="card">
+            <div class="card-title">Title Name</div>
+            <div class="card-author">
+              <div class="author-dot"></div>
+              <div class="author-name">Author/Business</div>
+            </div>
+          </div>
+
+          <div class="card card-center">
+            <div class="read-time-pill">⏺ X mins read</div>
+            <div class="card-title">Title Name</div>
+            <div class="card-author">
+              <div class="author-dot"></div>
+              <div class="author-name">Author/Business</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Title Name</div>
+            <div class="card-author">
+              <div class="author-dot"></div>
+              <div class="author-name">Author/Business</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ✅ Subject Expert Settings Page -->
+      <!-- Subject Expert Settings Page -->
+      <div id="expert-settings-page" class="expert-settings-page" style="display: none;">
+        <h2 class="settings-heading">Welcome, Shaivya</h2>
+        <div class="searches-bar">
+          <input type="text" placeholder="Search" />
+          <button>🔍</button>
+        </div>
+        <div class="settings-container">
+          <div class="profile-section">
+            <div class="profile-card">
+              <div class="clients-now">
+                <h4>Clients Now</h4>
+                <p>Give the best service to get him to subscribe</p>
+                <hr class="client-divider" />
+              </div>
+              <img src="men.png" alt="Profile" class="profile-avatar" />
+              <h3>Richard Tyson</h3>
+              <p class="designation">CEO at Tokopedia</p>
+              <p class="employee-id">Employee ID: CLT - 001</p>
+
+              <div class="profile-details">
+                <p><strong>Phone:</strong> +6281235123288</p>
+                <p><strong>Email:</strong> richardtyson@gmail.com</p>
+                <p><strong>Address:</strong> Merdeka Street, Wonosobo</p>
+                <p><strong>Password:</strong> ••••••</p>
+                <p><strong>Bank:</strong> ••••••</p>
+                <p><strong>IIFSC code:</strong> ••••••</p>
+              </div>
+
+              <div class="description">
+                <h4>Description</h4>
+                <p>
+                  I’m the CEO at Tokopedia. Establishing an application myself is my goal.
+                  I want to help users find what they’re looking for in the best possible way.
+                </p>
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="client-section">
+            <div class="client-header">
+              <h3>My Clients</h3>
+              <div class="filters">
+                <select>
+                  <option>All Data</option>
+                </select>
+                <select>
+                  <option>August</option>
+                </select>
+              </div>
+            </div>
+            <table class="client-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone Number</th>
+                  <th>Employee ID</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="client-info">
+                    <img src="wman.png" alt="Daffa" class="client-avatar" />
+                    <div>
+                      <strong>Daffa Naufal</strong><br />
+                      <small>CEO at Google</small>
+                    </div>
+                  </td>
+
+                  <td>daffanaufal@gmail.com</td>
+                  <td>+6221345678</td>
+                  <td>GGL - 001</td>
+                </tr>
+                <tr>
+                  <td class="client-info">
+                    <img src="wman.png" alt="Shakir" class="client-avatar" />
+                    <div>
+                      <strong>Shakir Ramzi</strong><br />
+                      <small>CEO at Garena</small>
+                    </div>
+                  </td>
+                  <td>shakirramzi@gmail.com</td>
+                  <td>+6223467890</td>
+                  <td>GRN - 002</td>
+                </tr>
+                <tr>
+                  <td class="client-info">
+                    <img src="wman.png" alt="Zara" class="client-avatar" />
+                    <div>
+                      <strong>Zara Annisa</strong><br />
+                      <small>Ceo at Bukalapak</small>
+                    </div>
+                  </td>
+
+                  <td>annisazara@gmail.com</td>
+                  <td>+6221345978</td>
+                  <td>GAL - 001</td>
+                </tr>
+                <tr>
+                  <td class="client-info">
+                    <img src="wman.png" alt="Chris" class="client-avatar" />
+                    <div>
+                      <strong>Chris Evans</strong><br />
+                      <small>Ceo at Amazon</small>
+                    </div>
+                  </td>
+
+                  <td>chrisevans@gmail.com</td>
+                  <td>+6221325678</td>
+                  <td>GLL - 001</td>
+                </tr>
+                <tr>
+                  <td class="client-info">
+                    <img src="wman.png" alt="Daffa" class="client-avatar" />
+                    <div>
+                      <strong>Jack Miller</strong><br />
+                      <small>CEO at Dana</small>
+                    </div>
+                  </td>
+
+                  <td>jackmiller@gmail.com</td>
+                  <td>+6221145678</td>
+                  <td>GOL - 001</td>
+                </tr>
+
+                <!-- Add more rows as needed -->
+              </tbody>
+            </table>
+            <div class="pagination-footer">
+              <div class="entries-info">Showing 1 to 9 of 90 entries</div>
+              <div class="pagination-controls">
+                <span class="pagination-btn disabled">Previous</span>
+                <span class="pagination-btn active">1</span>
+                <span class="pagination-btn">2</span>
+                <span class="pagination-btn">Next</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="edit-button">Edit Details</button>
+        <!-- same content as writer, just update classes like profile-card → expert-profile-card if needed -->
+
+        <!-- Update any ID/class that was 'writer-*' to 'expert-*' for separation -->
+      </div>
+
+
+    </div>
+    <!-- subject setting page  -->
+
+
+    <!-- Client Final Dashboard -->
+    <div id="client-dashboard" class="final-page" style="display: none;">
+      <!-- Sidebar -->
+      <div class="sidebar-left">
+        <ul class="sidebar-menu">
+          <li onclick="showClientDashboard()">
+            <i class="fas fa-tachometer-alt"></i><span class="menu-label">Dashboard</span>
+          </li>
+          <li>
+            <i class="fas fa-book"></i><span class="menu-label">Resources</span>
+          </li>
+          <li>
+            <i class="fas fa-plus-circle"></i><span class="menu-label">Create</span>
+          </li>
+          <li onclick="showClientSettingsPage()">
+            <i class="fas fa-cog"></i><span class="menu-label">Settings</span>
+          </li>
+          <li>
+            <i class="fas fa-user"></i><span class="menu-label">My Portfolio</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Explore Page -->
+      <div id="client-explore-page" class="main-content">
+        <h1 class="explore-heading">Explore</h1>
+
+        <div class="search-box">
+          <span class="search-icon"><i class="fas fa-search" style="color: white;"></i></span>
+          <input type="text" class="explore-search" oninput="updateKeyword(this.value)" />
+        </div>
+
+        <div class="search-helper">Explore with Keywords/Topics/Authors</div>
+
+        <div class="search-result-section">
+          <div class="search-result-heading">
+            Showing search results for ‘<span id="search-keyword">KEYWORD</span>’
+          </div>
+        </div>
+
+        <div class="hashtag-container-client">
+          <div class="hashtag-frame-client">#AI</div>
+          <div class="hashtag-frame-client">#ML</div>
+          <div class="hashtag-frame-client">#DataScience</div>
+          <div class="hashtag-frame-client">#NLP</div>
+        </div>
+
+        <!-- 3 Cards Section -->
+        <div class="card-container-client">
+          <div class="card">
+            <div class="card-title">Title Name</div>
+            <div class="card-author">
+              <div class="author-dot"></div>
+              <div class="author-name">Author/Business</div>
+            </div>
+          </div>
+
+          <div class="card card-center">
+            <div class="read-time-pill">⏺ X mins read</div>
+            <div class="card-title">Title Name</div>
+            <div class="card-author">
+              <div class="author-dot"></div>
+              <div class="author-name">Author/Business</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Title Name</div>
+            <div class="card-author">
+              <div class="author-dot"></div>
+              <div class="author-name">Author/Business</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- client-settings page -->
+      <!-- ✅ Client Settings Page -->
+      <div id="client-settings-page" class="client-settings-page" style="display: none;">
+        <h2 class="settings-heading">Welcome, Shaivya</h2>
+        <div class="searches-bar">
+          <input type="text" placeholder="Search" />
+          <button>🔍</button>
+        </div>
+        <div class="settings-container">
+          <div class="profile-section">
+            <div class="profile-card">
+              <div class="clients-now">
+                <h4>Clients Now</h4>
+                <p>Give the best service to get him to subscribe</p>
+                <hr class="client-divider" />
+              </div>
+              <img src="men.png" alt="Profile" class="profile-avatar" />
+              <h3>Richard Tyson</h3>
+              <p class="designation">CEO at Tokopedia</p>
+              <p class="employee-id">Employee ID: CLT - 001</p>
+
+              <div class="profile-details">
+                <p><strong>Phone:</strong> +6281235123288</p>
+                <p><strong>Email:</strong> richardtyson@gmail.com</p>
+                <p><strong>Address:</strong> Merdeka Street, Wonosobo</p>
+                <p><strong>Password:</strong> ••••••</p>
+                <p><strong>Bank:</strong> ••••••</p>
+                <p><strong>IIFSC code:</strong> ••••••</p>
+              </div>
+
+              <div class="description">
+                <h4>Description</h4>
+                <p>
+                  I’m the CEO at Tokopedia. Establishing an application myself is my goal.
+                  I want to help users find what they’re looking for in the best possible way.
+                </p>
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="client-section">
+            <div class="client-header">
+              <h3>My Clients</h3>
+              <div class="filters">
+                <select>
+                  <option>All Data</option>
+                </select>
+                <select>
+                  <option>August</option>
+                </select>
+              </div>
+            </div>
+            <table class="client-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone Number</th>
+                  <th>Employee ID</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="client-info">
+                    <img src="wman.png" alt="Daffa" class="client-avatar" />
+                    <div>
+                      <strong>Daffa Naufal</strong><br />
+                      <small>CEO at Google</small>
+                    </div>
+                  </td>
+
+                  <td>daffanaufal@gmail.com</td>
+                  <td>+6221345678</td>
+                  <td>GGL - 001</td>
+                </tr>
+                <tr>
+                  <td class="client-info">
+                    <img src="wman.png" alt="Shakir" class="client-avatar" />
+                    <div>
+                      <strong>Shakir Ramzi</strong><br />
+                      <small>CEO at Garena</small>
+                    </div>
+                  </td>
+                  <td>shakirramzi@gmail.com</td>
+                  <td>+6223467890</td>
+                  <td>GRN - 002</td>
+                </tr>
+                <tr>
+                  <td class="client-info">
+                    <img src="wman.png" alt="Zara" class="client-avatar" />
+                    <div>
+                      <strong>Zara Annisa</strong><br />
+                      <small>Ceo at Bukalapak</small>
+                    </div>
+                  </td>
+
+                  <td>annisazara@gmail.com</td>
+                  <td>+6221345978</td>
+                  <td>GAL - 001</td>
+                </tr>
+                <tr>
+                  <td class="client-info">
+                    <img src="wman.png" alt="Chris" class="client-avatar" />
+                    <div>
+                      <strong>Chris Evans</strong><br />
+                      <small>Ceo at Amazon</small>
+                    </div>
+                  </td>
+
+                  <td>chrisevans@gmail.com</td>
+                  <td>+6221325678</td>
+                  <td>GLL - 001</td>
+                </tr>
+                <tr>
+                  <td class="client-info">
+                    <img src="wman.png" alt="Daffa" class="client-avatar" />
+                    <div>
+                      <strong>Jack Miller</strong><br />
+                      <small>CEO at Dana</small>
+                    </div>
+                  </td>
+
+                  <td>jackmiller@gmail.com</td>
+                  <td>+6221145678</td>
+                  <td>GOL - 001</td>
+                </tr>
+
+                <!-- Add more rows as needed -->
+              </tbody>
+            </table>
+            <div class="pagination-footer">
+              <div class="entries-info">Showing 1 to 9 of 90 entries</div>
+              <div class="pagination-controls">
+                <span class="pagination-btn disabled">Previous</span>
+                <span class="pagination-btn active">1</span>
+                <span class="pagination-btn">2</span>
+                <span class="pagination-btn">Next</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="client-edit-button">Edit Details</button>
+        <!-- same content as writer, just update classes like profile-card → expert-profile-card if needed -->
+
+        <!-- Update any ID/class that was 'writer-*' to 'expert-*' for separation -->
+      </div>
+      <!-- ✅ CLIENT DASHBOARD PAGE -->
+      <!-- ✅ CLIENT DASHBOARD PAGE -->
+      <div id="client-dashboard-preview" class="white-bg" style="display: none; padding: 2rem; min-height: 100vh;">
+
+        <!-- 🔝 Breadcrumb -->
+        <div style="font-size: 0.9rem; color: gray; margin-bottom: 1rem;">Dashboard > Profile</div>
+
+        <!-- 👋 Welcome Heading -->
+        <h2>Welcome, Shaivya</h2>
+        <p style="margin-bottom: 2rem;">Your Dashboard Preview</p>
+
+        <!-- 🔘 Filter Buttons -->
+        <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+          <button class="active">Today</button>
+          <button class="active1">Select Date</button>
+          <button class="active2">Filter</button>
+        </div>
+
+        <!-- ✅ Wrapped Top Cards -->
+        <div class="top-card-wrapper" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+
+          <!-- 👤 Profile Summary Card -->
+          <div class="profile-card">
+            <div style="background: #1c1c1c; color: white; padding: 1rem; border-radius: 10px; flex: 1 1 250px;">
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <img src="men.png" alt="Profile" style="width: 60px; border-radius: 50%;" />
+                <div>
+                  <h4>Jerome Bell</h4>
+                  <p style="font-size: 0.9rem;">Marketing Coordinator</p>
+                </div>
+              </div>
+              <hr style="margin: 1rem 0;" />
+              <div class="client-contact-info">
+                <p><strong>Phone:</strong> +6281234567890</p>
+                <p><strong>Email:</strong> richardtyson@gmail.com</p>
+                <p><strong>Address:</strong> Merdeka Street, Wonosobo</p>
+                <p><strong>Description:</strong> CEO at Tokopedia.</p>
+              </div>
+
+              <button style="margin-top: 1rem;">Go to Details</button>
+            </div>
+          </div>
+
+          <!-- 💰 Payments Done Card -->
+          <div class="card-with-icon" style="flex: 1 1 200px;">
+            <img src="payment-icon.png" alt="Coin Icon" class="card-icon" />
+            <div class="card-content">
+              <h4>Payments done</h4>
+              <h2>Rs. XYZ</h2>
+              <p class="positive-change">+6.25%</p>
+            </div>
+          </div>
+
+          <!-- 📚 Words Ordered Card -->
+          <div class="card-with-icon" style="flex: 1 1 200px;">
+            <img src="book.png" alt="Book Icon" class="card-icon" />
+            <div class="card-content">
+              <h4>Words ordered</h4>
+              <h2>XXX</h2>
+              <p class="negative-change">-5.23%</p>
+            </div>
+          </div>
+
+          <!-- 🧩 Engagement Card -->
+          <div class="cards-with-icon" style="flex: 1 1 200px;">
+            <img src="engagement-icon.png" alt="Puzzle Icon" class="card-icon" />
+            <div class="card-content">
+              <h4>Engagement so far</h4>
+              <h2>50%</h2>
+              <p class="positive-change">+9.8%</p>
+            </div>
+          </div>
+
+          <!-- 🕓 Words Pending Card -->
+          <div class="cardes-with-icon" style="flex: 1 1 200px;">
+            <img src="book.png" alt="Book Icon" class="card-icon" />
+            <div class="card-content">
+              <h4>Words pending</h4>
+              <h2>XXX</h2>
+              <p class="negative-change">-2.15%</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 📊 Task Statistics and Graph -->
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;">
+
+          <!-- 📈 Task Statistics -->
+          <!-- 📈 Task Statistics Card -->
+          <div class="task-card">
+            <h4 class="task-title">Task Statistic</h4>
+
+            <div class="task-summary">
+              <div class="summary-box">
+                <p>Total Tasks</p>
+                <h3>476</h3>
+              </div>
+              <div class="summary-box">
+                <p>Overdue Tasks</p>
+                <h3>23</h3>
+              </div>
+            </div>
+
+            <!-- 🟠 Placeholder for circular chart (use Chart.js or image) -->
+            <div class="circle-chart-placeholder">
+              <p>Complete Task<br><strong>186 Task</strong></p>
+            </div>
+
+            <div class="task-list">
+              <div class="task-item">
+                <span class="dot dot-complete"></span> <strong>Complete Task</strong>
+                <span class="task-count">186</span>
+              </div>
+              <div class="task-item">
+                <span class="dot dot-inprogress"></span> <strong>Inprogress Task</strong>
+                <span class="task-count">47</span>
+              </div>
+              <div class="task-item">
+                <span class="dot dot-pending"></span> <strong>Pending Task</strong>
+                <span class="task-count">54</span>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- 📉 Graph Card With Image -->
+          <div style="background: #fff; border: 1px solid #ccc; padding: 1.5rem; border-radius: 15px; flex: 2 1 600px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <h4 style="font-weight: 600; font-size: 1.1rem;">Content Performance Overview</h4>
+              <select style="padding: 0.4rem 0.6rem; border-radius: 5px; border: 1px solid #ccc;">
+                <option>Month</option>
+                <option>Week</option>
+              </select>
+            </div>
+            <div style="margin-top: 1.2rem;">
+              <img src="graph.jpg" alt="Performance Chart" style="width: 100%; height: auto; border-radius: 10px;" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+  </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="index.js"></script>
+
+
+</body>
+
+</html>
