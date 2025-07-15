@@ -584,7 +584,7 @@ body {
   flex-wrap: wrap;
   top: 245px;
   background-color: none;
-  left: 458px;
+      left: 525px;
   display: flex;
   margin-top: 15px;
   overflow: visible;
@@ -1627,7 +1627,7 @@ body {
   color: #ccc;
   font-size: 14px;
   margin-top: 255px;
-  margin-left: 490px;
+      margin-left: 541px;
   width: 372px;
 }
 
@@ -1637,7 +1637,7 @@ body {
   background-color: black;
   color: white;
   border-radius: 6px;
-  margin-left: 90px;
+  margin-left: 190px;
   border: none;
   cursor: pointer;
 }
@@ -2556,8 +2556,10 @@ body {
 #client-dashboard .white-bg {
   background-color: #ffffff !important;
   padding: 192px;
-  margin-left: 170px;
-  margin-top: 34px;
+  margin-left: 135px;
+  margin-top: 4px;
+
+
 }
 #client-dashboard button.client-active2{
   align-self: flex-start;
@@ -2569,6 +2571,7 @@ body {
     border-radius: 4px;
     height: 38px;
     cursor: pointer;
+    width:80px;
     margin-top: 20px;
     transition: background-color 0.3s ease;
     /* margin-left:27px; */
@@ -2586,9 +2589,10 @@ body {
     color: white;
     border: none;
     
-    width: 50px;
+    width: 80px;
     font-size: 15px;
     border-radius: 4px;
+    
     height: 38px;
     cursor: pointer;
     margin-top: 20px;
