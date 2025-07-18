@@ -1703,7 +1703,7 @@ body {
   color: #ccc;
   font-size: 14px;
   margin-top: 17px;
-  margin-left: 400px;
+  margin-left: 465px;
 }
 
 .read-now-btn {
@@ -2311,7 +2311,7 @@ body {
     margin-top: 5px;
     padding-top: 44px;
     text-align: center;
-    margin-left: 0px;
+    margin-left: 20px;
 }
 
 /* .settings-heading {
@@ -2502,7 +2502,7 @@ body {
   color: #333;
   font-family: 'Segoe UI', sans-serif;
  
-      margin-left: 5px;
+      margin-left: 20px;
 }
 
 .expert-edit-button {
@@ -3022,7 +3022,7 @@ body {
     cursor: pointer;
     margin-top: 20px;
     transition: background-color 0.3s ease;
-    margin-left: 14px;
+    margin-left: 45px;
 }
 
 
