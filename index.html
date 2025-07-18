@@ -24,21 +24,6 @@
       display: none;
     }
 
-    .search-result-heading {
-      margin-top: 4px;
-      font-family: 'Tw Cen MT', sans-serif;
-      font-weight: 700;
-      font-size: 21.82px;
-      font-style: italic;
-      line-height: 24px;
-      letter-spacing: 0.04em;
-      color: rgba(255, 255, 255, 0.9);
-      background: none;
-      padding: 0;
-      border: none;
-      width: auto;
-      position: relative;
-    }
 
     .search-helper {
       margin-bottom: 4px;
@@ -335,12 +320,14 @@
       <div class="main-content">
         <h1 class="explore-heading">Explore</h1>
 
-        <div class="searching-box">
-          <span class="search-icon"><i class="fas fa-search" style="color: white;"></i></span>
-          <input type="text" class="explore-search" oninput="updateKeyword(this.value)" />
+        <div class="search-box">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" class="explore-search" oninput="updateKeyword(this.value)" placeholder="Search..." />
+          <div class="search-helper">Explore with Keywords/Topics/Authors</div>
         </div>
 
-        <div class="search-helper">Explore with Keywords/Topics/Authors</div>
+
+        
 
         <div class="search-result-section">
           <div class="search-result-heading">
@@ -758,7 +745,7 @@
                   </td>
                   <td>shakirramzi@gmail.com</td>
                   <td>+6223467890</td>
-                  <td>GRN - 002</td>
+                  <td>GRN- 002</td>
                 </tr>
                 <tr>
                   <td class="client-info">
@@ -1599,51 +1586,51 @@
       </div>
       <!-- ✅ CLIENT CREATE PAGE -->
       <div id="client-create-page" class="client-create-page" style="display: none;">
-  <h2>Welcome, Business name</h2>
+        <h2>Welcome, Business name</h2>
 
-  <form id="taskForm">
-    <div class="client-form-group">
-      <label>Topic</label>
-      <small>The title that will go as it is</small>
-      <input type="text" placeholder="Enter topic" />
-    </div>
+        <form id="taskForm">
+          <div class="client-form-group">
+            <label>Topic</label>
+            <small>The title that will go as it is</small>
+            <input type="text" placeholder="Enter topic" />
+          </div>
 
-    <div class="client-form-group">
-      <label>Due date</label>
-      <small>The date of completion</small>
-      <input type="date" />
-    </div>
+          <div class="client-form-group">
+            <label>Due date</label>
+            <small>The date of completion</small>
+            <input type="date" />
+          </div>
 
-    <div class="client-form-group">
-      <label>Word count</label>
-      <small>Words that would be compensated</small>
-      <input type="number" />
-    </div>
+          <div class="client-form-group">
+            <label>Word count</label>
+            <small>Words that would be compensated</small>
+            <input type="number" />
+          </div>
 
-    <div class="client-form-group">
-      <label>Additional instructions</label>
-      <small>Other important instructions to take care of</small>
-      <textarea rows="3"></textarea>
-    </div>
+          <div class="client-form-group">
+            <label>Additional instructions</label>
+            <small>Other important instructions to take care of</small>
+            <textarea rows="3"></textarea>
+          </div>
 
-    <div class="client-form-group">
-      <label>Payment for the work</label>
-      <small>Total payment for writer and subject matter expert</small>
-      <input type="text" />
-    </div>
+          <div class="client-form-group">
+            <label>Payment for the work</label>
+            <small>Total payment for writer and subject matter expert</small>
+            <input type="text" />
+          </div>
 
-    <div class="add-row-wrapper">
-  <div class="add-row-btn">
-    <i class="fas fa-plus-circle"></i> Add more rows for instructions
-  </div>
-</div>
+          <div class="add-row-wrapper">
+            <div class="add-row-btn">
+              <i class="fas fa-plus-circle"></i> Add more rows for instructions
+            </div>
+          </div>
 
-<div class="submit-btn-wrapper">
-  <button class="client-submit-btn" type="submit">Submit</button>
-</div>
+          <div class="submit-btn-wrapper">
+            <button class="client-submit-btn" type="submit">Submit</button>
+          </div>
 
-  </form>
-</div>
+        </form>
+      </div>
 
 
 
